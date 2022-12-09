@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+
 /**
- * main - A function that prints strings.
+ * main - Entry point
+ *
  * Description : Print strings with puts().
  * Return : Return 0 (Success)
  */
