@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * main - A function that prints strings.
  * Description : Print strings with puts().
