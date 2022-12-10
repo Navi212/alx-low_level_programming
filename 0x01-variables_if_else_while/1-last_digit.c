@@ -23,7 +23,7 @@ int main(void)
 	else if (n % 10 == 0)
 	{
 		m = n % 10;
-		printf("Last digit %d is %d and is 0\n", n, m);
+		printf("Last digit of %d is %d and is 0\n", n, m);
 	}
 	else
 	{
