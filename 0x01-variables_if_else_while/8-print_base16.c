@@ -1,4 +1,4 @@
-#include <stdio.>
+#include <stdio.h>
 
 /**
  * main - Prints all base 16 in lowercase, followed by a newline.
