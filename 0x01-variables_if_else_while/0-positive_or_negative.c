@@ -5,7 +5,7 @@
 /**
  * main - Checks if value stored is positive or negative.
  *
- * Return : 0 if exited successfully.
+ * Return : Always 0 when exited successfully otherwise non zero
  */
 int main(void)
 {
