@@ -2,7 +2,7 @@
 
 /**
  * _islower - Checks for lowercase character.
- *
+ *@c : Argument to be passed for check.
  * Description: A function that checks for a lowe case character.
  * Return: 0 on success.
  */
