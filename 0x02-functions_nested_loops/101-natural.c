@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * multiples_of_3 - Prints multiples of 3.
+ * multiples - Prints multiples of 3.
  *
  * Return: 0 on success.
  */
-int multiples_of_3(void)
+int multiples(void)
 {
 	int num = 1024;
 	int i;
