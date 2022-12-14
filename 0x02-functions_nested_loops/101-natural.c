@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * multiples - Prints multiples of 3.
+ * main - Prints multiples of 3.
  *
  * Return: 0 on success.
  */
-void multiples(void)
+int main(void)
 {
 	int num = 1024;
 	int i;
@@ -22,5 +22,7 @@ void multiples(void)
 	}
 
 	printf("%d\n", sum);
+
+	return (0);
 
 }
