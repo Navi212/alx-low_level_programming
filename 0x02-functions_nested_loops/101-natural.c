@@ -5,7 +5,7 @@
  *
  * Return: 0 on success.
  */
-int multiples(void)
+void multiples(void)
 {
 	int num = 1024;
 	int i;
