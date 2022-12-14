@@ -13,7 +13,7 @@ void multiples_of_3(void)
 
 	for (; i < 1024; ++i)
 	{
-		if (i % 3 == 0)
+		if (i % num == 0)
 		{
 			printf("%d \n", i);
 		}
