@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * times_table - A function that prints 9 multiplcation table.
@@ -19,32 +20,24 @@ void times_table(void)
 
 			if ((r < 10) && (i < 9))
 			{
-				_putchar((r % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				printf("%2d%c %c", r, ',', ' ');
 			}
 
 			else if ((r < 10) && (i >= 9))
 			{
-				_putchar((r % 10) + '0');
+				printf("%2d", r);
 			}
 
 			else if ((r >= 10) && (i < 9))
 			{
-				_putchar((r / 10) + '0');
-				_putchar((r % 10) + '0');
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				printf("%d%c %c", r, ',', ' ');
 			}
 
 			else
 			{
-				_putchar((r / 10) + '0');
-				_putchar((r % 10) + '0');
+				printf("%d", r);
 			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
