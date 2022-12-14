@@ -6,7 +6,7 @@
  *
  * Return: 0 on success.
  */
-void multiples_of_3(void)
+int multiples_of_3(void)
 {
 	int num = 3;
 	int i;
@@ -23,4 +23,6 @@ void multiples_of_3(void)
 			continue;
 		}
 	}
+
+	return (0);
 }
