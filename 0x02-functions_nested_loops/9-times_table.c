@@ -10,15 +10,14 @@ void times_table(void)
 	int i;
 	int j;
 	int r;
-	int limit;
 
-	for (j = 0; j <= limit; j++)
+	for (j = 0; j <= 9; j++)
 	{
-		for (i = 0; i <= limit; i++)
+		for (i = 0; i <= 9; i++)
 		{
 			r = i * j;
 
-			if (r < 10 && i < limit)
+			if ((r < 10) && (i < 9))
 			{
 				_putchar((r % 10) + '0');
 				_putchar(',');
@@ -26,12 +25,12 @@ void times_table(void)
 				_putchar(' ');
 			}
 
-			else if (r < 10 && i >= limit)
+			else if ((r < 10) && (i >= 9))
 			{
 				_putchar((r % 10) + '0');
 			}
 
-			else if (r >= 10 && i < limit)
+			else if ((r >= 10) && (i < 9))
 			{
 				_putchar((r / 10) + '0');
 				_putchar((r % 10) + '0');
