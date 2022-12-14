@@ -7,21 +7,21 @@
  */
 int multiples_of_3(void)
 {
-	int num = 3;
+	int num = 1024;
 	int i;
+	int sum = 0;
 
-	for (; i < 1024; ++i)
+	for (i = 0; i < num; ++i)
 	{
-		if (i % num == 0)
+		if ((i % 3 == 0) || (i % 5 == 0))
 		{
-			printf("%d \n", i);
+			sum += i;
 		}
 
-		else
-		{
-			continue;
-		}
+		
 	}
+
+	printf("%d\n", sum);
 
 	return (0);
 }
