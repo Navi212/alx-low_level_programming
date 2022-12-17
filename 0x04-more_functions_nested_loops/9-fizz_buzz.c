@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * fizzbuzz - FUnction that prints fizzbuzz
+ * main - Entry point
  *
- * Return: Fizzbuzz
+ * Return: 0 on success
  */
 
 int main(void)
