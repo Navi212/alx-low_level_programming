@@ -1,9 +1,10 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * fizzbuzz - Prints FizzBuzz on some certain conditions
- * Return: Conditions met
+ * fizzbuzz - FUnction that prints fizzbuzz
+ *
+ * Return: Fizzbuzz
  */
+
 void fizzbuzz(void)
 {
 	int i;
@@ -13,31 +14,63 @@ void fizzbuzz(void)
 		if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("FizzBuzz");
-			_putchar(' ');
+
+			if (i != 100)
+			{
+				printf(" ");
+			}
+
+			else
+			{
+				continue;
+			}
 		}
 
 		else if (i % 3 == 0)
 		{
 			printf("Fizz");
-			_putchar(' ');
+
+			if (i != 100)
+			{
+				printf(" ");
+			}
+
+			else
+			{
+				continue;
+			}
 		}
 
 		else if (i % 5 == 0)
 		{
 			printf("Buzz");
-			_putchar(' ');
+
+			if (i != 100)
+			{
+				printf(" ");
+			}
+
+			else
+			{
+				continue;
+			}
 		}
 
 		else
 		{
 			printf("%d", i);
-			_putchar(' ');
-		}
 
-		if (i != 100)
-		{
-			_putchar(' ');
-		}
+			if (i != 100)
+			{
+				printf(" ");
+			}
 
+			else
+			{
+				continue;
+			}
+		}
 	}
+
+	printf("\n");
 }
