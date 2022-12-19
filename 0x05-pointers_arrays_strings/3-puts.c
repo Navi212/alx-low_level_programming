@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _puts - Prints string to stdout.
  * @str: Pointer argument.
