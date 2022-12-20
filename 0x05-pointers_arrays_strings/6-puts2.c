@@ -22,10 +22,12 @@ void puts2(char *str)
 
 	while (j < i)
 	{
-		if (i % 2 == 0)
+		if (j % 2 == 0)
 		{
 			_putchar(str[j]);
 		}
+
+		j++;
 	}
 
 	_putchar('\n');
