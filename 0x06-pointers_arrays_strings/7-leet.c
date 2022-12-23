@@ -12,7 +12,7 @@ char *leet(char *s)
 	int i, j;
 
 	char leet1[] = "aeotl";
-	char leet2 = "AEOTL";
+	char leet2[] = "AEOTL";
 	char leet3[] = "43071";
 
 	j = 0;
