@@ -9,7 +9,8 @@
 
 void print_number(int n)
 {
-	int ten, i, neg, digit1, digit2;
+	int ten, i, neg;
+	unsigned int digit1, digit2;
 
 	ten = 1;
 	if (n < 0)
