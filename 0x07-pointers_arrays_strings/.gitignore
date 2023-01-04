@@ -1,6 +1,7 @@
 0-main
 0-memset
 2-strchr
+3-strspn
 4-strbrk
 5-strstr
 8-print_diagsums
