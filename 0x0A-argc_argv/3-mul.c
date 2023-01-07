@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * main - multiplies two numbers
- * @argc: counts arguments
- * @argv: arrays of string pointers
+ * @argc: argument counter
+ * @argv: argument array
  *
- * Return: result
+ * Return: 0 on success
  */
 
 int main(int argc, char *argv[])
@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("%s\n", err);
-		
+
 		return (1);
 	}
 
-	mulResult = atoi(argv[1]) * atoi(argv[2]);
+	mulResult = atoi(argv[1]) + atoi(argv[2]);
 	printf("%d\n", mulResult);
 
 	return (0);
