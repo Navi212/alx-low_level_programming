@@ -2,13 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _wcount - counts words
+ * wrd_count - counts words
  * @sw: string
  *
  * Return: int
  */
 
-int _wcount(char *sw)
+int wrd_count(char *sw)
 {
 	int l, wc;
 
@@ -27,13 +27,13 @@ int _wcount(char *sw)
 }
 
 /**
- * _trspace - removes trailing whitespaces
+ * rmspace - removes trailing whitespaces
  * @st: string
  *
  * Return: Pointer
  */
 
-char *_trspace(char *st)
+char *rmspace(char *st)
 {
 	while (*st == ' ')
 		st++;
@@ -55,13 +55,13 @@ char **strtow(char *str)
 	if (str == NULL || *str == 0)
 		return (0);
 	fr = 0;
-	wc = _wcount(str);
+	wc = wrd_count(str);
 	if (wc == 0)
 		return (0);
 	s = malloc((wc + 1) * sizeof(char *));
 	if (s == 0)
 		return (0);
-	ts = _trspace(str);
+	ts = rmspace(str);
 	for (i = 0; i < wc; i++)
 	{
 		l = 0;
@@ -76,7 +76,7 @@ char **strtow(char *str)
 		for (j = 0, l2 = 0; l2 < l; l2++, j++)
 			s[i][j] = *(ts + l2);
 		s[i][j] = '\0';
-		ts = _trspace(ts + l);
+		ts = rmspace(ts + l);
 	}
 	s[i] = NULL;
 	if (fr == 1)
