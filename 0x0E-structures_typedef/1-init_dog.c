@@ -1,8 +1,3 @@
-/*
- * File: 1-init_dog.c
- * Auth: Joseph Chris N
- */
-
 #include "dog.h"
 #include <stdlib.h>
 
