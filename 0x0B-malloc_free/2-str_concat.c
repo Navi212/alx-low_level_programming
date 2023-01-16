@@ -1,40 +1,44 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * str_concat - concats two strings
- * @s1: string
- * @s2: string to concatenate
+ * str_concat - concatenates s2 to s1
+ * @s1: destination string
+ * @s2: source string
  *
- * Return: pointer to s2 is successful
- * NULL on failure
+ * Return: pointer to s1
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
-	int i, j, k, len;
+	char *arr;
+	int i, j, len_s1, len_s2, sum = 0;
 
 	if (s1 == NULL)
-		s1 = "";
+		s1 ="";
 
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++, len++)
+	for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
 		;
 
-	ptr = malloc(sizeof(char) * len);
+	for (len_s2 = 0; s2[len_s2] != '\0'; len_s2++)
+		;
 
-	if (ptr == NULL)
+	sum = len_s1 + len_s2;
+
+	arr = malloc(sizeof(char) * (sum + 1));
+	if (arr == NULL)
 		return (NULL);
 
-	for (j = 0; s1[j] != '\0'; j++)
-		ptr[j] = s1[j];
+	for (i = 0; s1[i] != '\0'; i++)
+		arr[i] = s1[i];
 
-	for (k = 0; s2[k] != '\0'; k++, j++)
-		ptr[j] = s2[k];
-	ptr[j] = '\0';
+	for (j = 0; s2[j] != '\0'; j++)
+		arr[i++] = s2[j];
+	arr[i++] = '\0';
 
-	return (ptr);
+	return (arr);
 }
