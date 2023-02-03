@@ -1,13 +1,14 @@
 #include "lists.h"
 
 /**
- * before_main - executes before the main function
- * executes.
+ * my_constructor_fun - function that executes before
+ * main function executes
  *
- * Description: function has constructor attribute.
  * Return: nothing
  */
+void before_main(void)__attribute__((constructor));
 void before_main(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow, \n");
+	printf("I bore my house upon my back!\n");
 }

@@ -1,54 +1,61 @@
 #include "lists.h"
 
 /**
- * add_node - adds a node at the begining of
- * a list_t list
- * @head: head or first node
+ * add_node - adds node to the beginning of a list
+ * @head: head or start of the list
  * @str: string
  *
  * Return: address of the new element
  */
-
-size_t len(const char *str);
-
+unsigned int len(const char *str);
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node = *head;
+	list_t *newnode = NULL;
 
-	new_node = malloc(sizeof(list_t));
-
-	if (new_node == NULL)
-	{
+	if (head == NULL)
 		return (NULL);
-		exit(-1);
+	
+	newnode = malloc(sizeof(list_t));
+	if (newnode == NULL)
+		return (NULL);
+	else
+	{
+		newnode->str = strdup(str);
+		newnode->next = NULL;
+		newnode->len = len(str);
 	}
+
+	if (*head == NULL)
+		*head = newnode;
 
 	else
 	{
-		new_node->str = strdup(str);
-		new_node->next = *head;
-		new_node->len = len(str);
-		*head = new_node;
+		newnode->next = *head;
+		*head = newnode;
 	}
 
-	return (new_node);
+	return (*head);
 }
 
 
 /**
- * len - determines th length of a string
- * @str: string to check
+ * len - checks len of a string
+ * @str: string
  *
  * Return: length of string
  */
-
-size_t len(const char *str)
+unsigned int len(const char *str)
 {
-	size_t i;
-	if (str == NULL)
-		return (0);
+	unsigned int num = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	return (i);
+	if (str == NULL)
+		exit(-1);
+	else
+	{
+		while (str[num] != '\0')
+		{
+			num++;
+		}
+	}
+	return (num);
 }
