@@ -1,28 +1,39 @@
 #include "main.h"
-void print_b(unsigned long int n);
+#include <stdio.h>
+
 /**
- * print_binary - Prints the binary representation of a number
- * @n: Number to interpret as binary
+ * print_binary - prints the binary representation
+ * of a number
+ * @n: number
+ *
+ * Return: nothing
  */
+void cal_binary(unsigned long int n);
 void print_binary(unsigned long int n)
 {
 	if (n == 0)
+	{
 		_putchar('0');
-	else
-		print_b(n);
+		return;
+	}
+	cal_binary(n);
 }
 
 /**
- * print_b - Prints the binary representation of a number
- * @n: Number to interpret as binary
+ * cal_binary - performs operation (number to binary)
+ * @n: number
+ *
+ * Return: nothing
  */
-void print_b(unsigned long int n)
+void cal_binary(unsigned long int n)
 {
 	if (n == 0)
 		return;
-	print_b((n >> 1));
-	if ((n & 1) == 1)
+
+	cal_binary(n >> 1);
+
+	if (n & 1)
 		_putchar('1');
-	if ((n & 1) == 0)
+	else
 		_putchar('0');
 }
