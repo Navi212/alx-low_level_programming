@@ -1,20 +1,20 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * clear_bit - sets the value of a bit to 0 at a given index.
- * @n: Pointer to a number
- * @index: Index to switch
- * Return: 1 if it worked, or -1 if an error occurred
+ * clear_bit - sets value of a bit to 0 at a given index
+ * @n: number to set its bit value
+ * @index: index or location to set
+ *
+ * Return: 1 on success
+ * or -1 on failure
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int mask;
-
-	mask = 1;
-	mask = mask << index;
-	if (index > sizeof(unsigned long int) * 8 || n == NULL)
+	if (index >= sizeof(unsigned long int) * 8)
 		return (-1);
-	if (((*n >> index) & 1) == 1) /*Checks if 1 at position*/
-		*n = mask ^ *n;
+
+	*n = *n & (~(1 << index));
 
 	return (1);
 }
