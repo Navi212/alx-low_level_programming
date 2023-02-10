@@ -11,7 +11,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	ssize_t readed, num;
+	ssize_t actual_num, write_nums;
 	char *buf;
 
 	if (filename == NULL)
@@ -24,16 +24,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	readed = read(fd, buf, letters);
-	if (readed == -1)
+	actual_num = read(fd, buf, letters);
+	if (actual_num == -1)
 	{
 		free(buf);
 		close(fd);
 		return (0);
 	}
 
-	num = write(STDOUT_FILENO, buf, readed);
-	if (num == -1 || num != readed)
+	write_nums = write(STDOUT_FILENO, buf, actual_num);
+	if (write_nums == -1 || write_nums != actual_num)
 	{
 		free(buf);
 		close(fd);
@@ -41,5 +41,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	free(buf);
 	close(fd);
-	return (readed);
+	return (actual_num);
 }
