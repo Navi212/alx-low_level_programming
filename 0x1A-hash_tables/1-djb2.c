@@ -17,5 +17,5 @@ unsigned long int hash_djb2(const unsigned char *str)
 	while ((i = *str++))
 		hashd_val = ((hashd_val << 5)) + i;
 	
-	/*return (hashd_val);*/
+	return (hashd_val);
 }
