@@ -7,15 +7,15 @@
  *
  * Return: Hashed value
  */
-
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int hashd_val;
-	int i;
+    unsigned long int hash;
+    int c;
 
-	hashd_val = 5381;
-	while ((i = *str++))
-		hashd_val = ((hashd_val << 5)) + i;
-	
-	return (hashd_val);
+    hash = 5381;
+    while ((c = *str++))
+    {
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+    }
+    return (hash);
 }
