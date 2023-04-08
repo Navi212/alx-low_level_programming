@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - Deletes a hash table.
+ * hash_table_delete - Deletes hash table.
  * @ht: A pointer to a hash table.
  */
 void hash_table_delete(hash_table_t *ht)
@@ -12,10 +12,10 @@ void hash_table_delete(hash_table_t *ht)
 
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i] != NULL)
+		if (ht->array[i])
 		{
 			node = ht->array[i];
-			while (node != NULL)
+			while (node)
 			{
 				tmp = node->next;
 				free(node->key);
