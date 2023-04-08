@@ -5,7 +5,7 @@
  * @ht: A pointer to the hash table.
  * @key: The key to get the value of.
  *
- * Return: Value of a key
+ * Return: Value of a key on success
  * Otherwise NULL
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
@@ -13,7 +13,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *node;
 	unsigned long int idx;
 
-	if (!ht || !key || *key == '\0')
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	idx = key_index((const unsigned char *)key, ht->size);
