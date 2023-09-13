@@ -6,7 +6,7 @@
  * @array: array
  * @size: size of the array
  * @value: value to search for in the array
- * 
+ *
  * Return: index of the number if found in the array
  * otherwise -1 if not present in the array
  */
